@@ -1,20 +1,16 @@
-// Not solved
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 int main() {
-    string w;
-    getline(cin, w);
-    int n = w[0] - '0';
-    int m = w[2] - '0';
-    int a = w[4] - '0';
-    
-    int size = n * m;
-    int re = 0;
-    for (; size > 0;) {
-        if (size )
-        size -= a;
-    }
-
+    long long n, m, a;
+    cin >> n >> m >> a;
+    auto width = n/a;
+    if (n % a != 0)
+        width++;
+    auto hight = m/a;
+    if (m % a != 0)
+        hight++;
+    cout << width*hight;
     return 0;
 }
